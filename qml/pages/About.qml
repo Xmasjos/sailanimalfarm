@@ -35,7 +35,6 @@ Page {
             }
             TextArea {
                 color: "white"
-                anchors.horizontalCenter: column.horizontalCenter
                 text: "Port of Animal Farm app for Ubuntu Touch (author Robert Ancell)"
                 anchors {
                      left: parent.left
