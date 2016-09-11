@@ -4,4 +4,4 @@ A simple game for babies to touch animals and hear them make noise.
 
 © 2016, licence: GPL3
 
-<img src="https://openrepos.net/sites/default/files/packages/6876/screenshot-20160403174511.jpg" height="640">
+<img src="https://openrepos.net/sites/default/files/screenshot_20160911_001.png" height="640">
