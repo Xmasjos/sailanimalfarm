@@ -2,35 +2,35 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Page {
-    id: page
+    id: aboutPage
 
     SilicaFlickable {
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: aboutColumn.height
 
         Column {
-            id: column
-            width: page.width
+            id: aboutColumn
+            width: aboutPage.width
             spacing: Theme.paddingLarge
             PageHeader {
                 title: qsTr("About")
             }
             Label {
-                anchors.horizontalCenter: column.horizontalCenter
+                anchors.horizontalCenter: aboutColumn.horizontalCenter
                 text: "Sail Animal Farm"
                 font.pixelSize: Theme.fontSizeExtraLarge
             }
             Label {
-                anchors.horizontalCenter: column.horizontalCenter
+                anchors.horizontalCenter: aboutColumn.horizontalCenter
                 text: "Version 1.0"
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
             Label {
-                anchors.horizontalCenter: column.horizontalCenter
+                anchors.horizontalCenter: aboutColumn.horizontalCenter
                 text: "2016"
             }
             Label {
-                anchors.horizontalCenter: column.horizontalCenter
+                anchors.horizontalCenter: aboutColumn.horizontalCenter
                 text: "© Author of this port: kuba77"
             }
             TextArea {
@@ -43,7 +43,6 @@ Page {
                      rightMargin: 15
                  }
             }
-
         }
     }
 }

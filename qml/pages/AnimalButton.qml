@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2013 Robert Ancell <robert.ancell@gmail.com>
  *               2016 kuba77 <kuba707@centrum.cz>
+ *               2021 Xmasjos
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -13,15 +14,15 @@ import QtQuick 2.0
 import QtMultimedia 5.0
 
 Rectangle {
-    id: box
+    id: animalBox
     antialiasing: true
     radius: 10
-    property alias color: box.color
-    property alias imageSource: image.source
-    property alias soundSource: sound.source
+    property alias color: animalBox.color
+    property alias imageSource: animalImage.source
+    property alias soundSource: animalSound.source
 
     Image {
-        id: image
+        id: animalImage
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         width: parent.width * 0.8
@@ -30,27 +31,27 @@ Rectangle {
     }
 
     Audio {
-        id: sound
+        id: animalSound
     }
 
     SequentialAnimation {
         id: animation
         RotationAnimation {
-            target: box
+            target: animalBox
             properties: "rotation"
             duration: 100
             to: 10
             easing.type: Easing.OutQuad
         }
         RotationAnimation {
-            target: box
+            target: animalBox
             properties: "rotation"
             duration: 200
             to: -10
             easing.type: Easing.OutQuad
         }
         RotationAnimation {
-            target: box
+            target: animalBox
             properties: "rotation"
             duration: 100
             to: 0
@@ -60,6 +61,6 @@ Rectangle {
 
     MouseArea {
         anchors.fill: parent
-        onPressed: { animation.start(); sound.play() }
+        onPressed: { animation.start(); animalSound.play() }
     }
 }

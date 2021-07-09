@@ -16,15 +16,17 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-sailanimalfarm.cpp
 
-OTHER_FILES += qml/harbour-sailanimalfarm.qml \
+DISTFILES += qml/harbour-sailanimalfarm.qml \
     qml/cover/CoverPage.qml \
+    qml/pages/MainPage.qml \
     rpm/harbour-sailanimalfarm.changes.in \
+    rpm/harbour-sailanimalfarm.changes.run.in \
     rpm/harbour-sailanimalfarm.spec \
     rpm/harbour-sailanimalfarm.yaml \
     translations/*.ts \
     harbour-sailanimalfarm.desktop
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -35,9 +37,3 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-sailanimalfarm-de.ts
-
-DISTFILES += \
-    qml/pages/Main.qml \
-    qml/pages/AnimalButton.qml \
-    qml/pages/About.qml
-
